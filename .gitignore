@@ -1,0 +1,21 @@
+# Local user context and project-specific research material
+/profiles/user.md
+/studies/
+/docs/reference/
+
+# Local runs, model artifacts, and credentials
+**/.env
+**/.env.*
+**/secrets.*
+**/credentials.*
+**/runs/
+**/outputs/
+**/checkpoints/
+**/wandb/
+**/__pycache__/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.log
+.DS_Store
