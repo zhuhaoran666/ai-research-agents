@@ -9,7 +9,7 @@
 ## 快速开始
 
 1. 将 [`profiles/user.example.md`](profiles/user.example.md) 复制为本地 `profiles/user.md`，只填写与协作有关的偏好；该文件默认不纳入 Git。
-2. 为课题建立一份研究笔记，可以从 [`templates/research-note.md`](templates/research-note.md) 开始，写明问题、初步想法、现有材料、资源范围和最想验证的疑问。
+2. 有初步 idea 时，先看[怎样描述一个 idea](docs/idea-guideline.md)，用几句话或[简短模板](templates/idea.md)说明任务、观察依据、原因猜测、初步方法与这次目标；暂无方法也可以开始。已有材料可直接整理进[研究笔记](templates/research-note.md)，后续持续维护同一份笔记。
 3. 给主 Agent 加载 [`agents/README.md`](agents/README.md)、[`agents/mentor.md`](agents/mentor.md)、本地用户档案和研究笔记。具体任务再加载相应角色指令；没有多 Agent 编排器时也可顺序执行。
 4. 从当前最需要的工作开始。新 idea 通常先用 `literature + method`；已有代码或结果可直接进入 `code + analysis`；稿件交给 `writing`，最终由独立的 `reviewer` 审查。
 
@@ -41,7 +41,7 @@
 
 ## 导航
 
-- [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
+- [idea 描述指南](docs/idea-guideline.md) · [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
 - [文献、写作与审稿](docs/literature-and-writing.md) · [个性化机制](docs/personalization.md)
 - [按需模板](templates/README.md) · [虚构项目示例](examples/README.md)
 - [已有 AutoResearch 项目对照](docs/prior-art.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)

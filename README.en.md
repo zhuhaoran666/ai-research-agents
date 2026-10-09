@@ -9,7 +9,7 @@ A portable framework for research collaboration: start with a problem and an ini
 ## Quick start
 
 1. Copy [`profiles/user.example.md`](profiles/user.example.md) to local `profiles/user.md`. Record only preferences relevant to collaboration; the local file is ignored by Git.
-2. Create a research note, optionally using [`templates/research-note.md`](templates/research-note.md). Describe the problem, initial idea, available materials, resource limits, and most important question to test.
+2. For an initial idea, use the [idea description guide](docs/idea-guideline.md) and optional [short template](templates/idea.md), currently in Chinese. Describe the task, observations and their sources, possible explanations, proposed method, and what you want to do next. You can start without a method. Put existing materials and subsequent progress in one [research note](templates/research-note.md).
 3. Give the main agent [`agents/README.md`](agents/README.md), [`agents/mentor.md`](agents/mentor.md), the local profile, and the research note. Load other role instructions as needed. Sequential use works without a multi-agent orchestrator.
 4. Start where the project needs help. A new idea often starts with `literature + method`; existing code or results can go to `code + analysis`. Use `writing` for the manuscript and an independent `reviewer` for its final assessment.
 
@@ -41,7 +41,7 @@ These are responsibilities, not seven required persistent processes. Keep writin
 
 ## Documentation
 
-- [Architecture and collaboration](docs/architecture.md) · [Lightweight workflow](docs/workflows.md) · [Task coordination](docs/operating-model.md)
+- [Idea description guide](docs/idea-guideline.md) · [Architecture and collaboration](docs/architecture.md) · [Lightweight workflow](docs/workflows.md) · [Task coordination](docs/operating-model.md)
 - [Literature, writing, and review](docs/literature-and-writing.md) · [Personalization](docs/personalization.md)
 - [Optional templates](templates/README.md) · [Examples](examples/README.md)
 - [Comparison with AutoResearch projects](docs/prior-art.md) · [Lessons from nnU-Net's research design](docs/nnunet-lessons.md)
