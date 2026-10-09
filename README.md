@@ -15,7 +15,7 @@
 
 一个可直接改写的起始任务：
 
-> 阅读共享原则、导师和文献检索角色指令，以及本项目研究笔记。检索必须覆盖 PaperNotes、Google Scholar 和其他与领域匹配的学术网站，先查这个问题的已有解法、最接近的强基线与关键局限；列出对初步想法最有影响的证据和两个值得共同设计的验证实验。注明实际检索和阅读范围，关键判断回到原论文，不把计划写成已经完成的结果。
+> 阅读共享原则、导师和文献检索角色指令，以及本项目研究笔记。检索必须覆盖 PaperNotes、Google Scholar、arXiv，并按领域检索会议与期刊：医学图像覆盖 MICCAI、ISBI、MIA、TMI、TPAMI；具身智能重点查 IROS、ICRA，并按任务补查 RSS、CoRL。先查这个问题的已有解法、最接近的强基线与关键局限；列出对初步想法最有影响的证据和两个值得共同设计的验证实验。注明实际检索和阅读范围，关键判断回到原论文，不把计划写成已经完成的结果。
 
 ## 七种职责
 
@@ -42,7 +42,7 @@
 ## 导航
 
 - [idea 描述指南](docs/idea-guideline.md) · [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
-- [文献、写作与审稿](docs/literature-and-writing.md) · [个性化机制](docs/personalization.md)
+- [文献、写作与审稿](docs/literature-and-writing.md) · [检索来源与领域选择](docs/literature-sources.md) · [个性化机制](docs/personalization.md)
 - [按需模板](templates/README.md) · [虚构项目示例](examples/README.md)
 - [已有 AutoResearch 项目对照](docs/prior-art.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)
 

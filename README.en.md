@@ -15,7 +15,7 @@ A portable framework for research collaboration: start with a problem and an ini
 
 A starting task to adapt:
 
-> Read the shared principles, mentor and literature role instructions, and this project's research note. Cover PaperNotes, Google Scholar, and at least one other academic source appropriate to the field. First investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State what you actually searched and read, and verify key claims against original papers. Keep proposed work distinct from completed results.
+> Read the shared principles, mentor and literature role instructions, and this project's research note. Cover PaperNotes, Google Scholar, and arXiv, plus conferences and journals appropriate to the field. Medical imaging research must cover MICCAI, ISBI, Medical Image Analysis, IEEE TMI, and TPAMI. For embodied intelligence and robotics, prioritize IROS and ICRA, adding RSS and CoRL as the task requires. First investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State what you actually searched and read, and verify key claims against original papers. Keep proposed work distinct from completed results.
 
 ## Seven responsibilities
 
@@ -42,7 +42,7 @@ These are responsibilities, not seven required persistent processes. Keep writin
 ## Documentation
 
 - [Idea description guide](docs/idea-guideline.md) · [Architecture and collaboration](docs/architecture.md) · [Lightweight workflow](docs/workflows.md) · [Task coordination](docs/operating-model.md)
-- [Literature, writing, and review](docs/literature-and-writing.md) · [Personalization](docs/personalization.md)
+- [Literature, writing, and review](docs/literature-and-writing.md) · [Search sources by field](docs/literature-sources.md) · [Personalization](docs/personalization.md)
 - [Optional templates](templates/README.md) · [Examples](examples/README.md)
 - [Comparison with AutoResearch projects](docs/prior-art.md) · [Lessons from nnU-Net's research design](docs/nnunet-lessons.md)
 
