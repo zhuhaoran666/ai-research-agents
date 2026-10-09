@@ -15,7 +15,7 @@ A portable framework for research collaboration: start with a problem and an ini
 
 A starting task to adapt:
 
-> Read the shared principles, mentor and literature role instructions, and this project's research note. Investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State which sources and sections you actually read. Keep proposed work distinct from completed results.
+> Read the shared principles, mentor and literature role instructions, and this project's research note. Cover PaperNotes, Google Scholar, and at least one other academic source appropriate to the field. First investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State what you actually searched and read, and verify key claims against original papers. Keep proposed work distinct from completed results.
 
 ## Seven responsibilities
 
