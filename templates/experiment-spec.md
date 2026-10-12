@@ -2,9 +2,8 @@
 
 - `spec_id`: <稳定 ID>
 - `version`: <版本；改变协议时递增>
-- `hypothesis_id`: <关联假设>
+- `hypothesis`: <关联假设：研究笔记中的位置或一句话>
 - `claim_evidence_matrix_version / claim_ids`: <关联拟写主张及证据要求>
-- `fingerprint_id/version / policy_id/version`: <任务画像和配置策略；不适用时说明原因>
 - `status`: draft
 - `owner_agent`: method
 - `implementation_agent`: code
@@ -47,12 +46,16 @@
 - 验证集和正式测试集用途：<...>
 - 选型 CV 与最终性能估计的分离：<独立测试/外层评价；无法分离则标探索性>
 - 超参数搜索空间与最终选择规则：<...>
-- 固定设计、规则生成和经验选择的责任边界：<引用 ConfigurationPolicy；手动例外需记录>
-- 候选清单生成、排除、失败和最终选择的记录位置：<...>
 - 允许 AI 自主尝试的局部变体、次数及搜索预算：<范围；无则写 none>
 - 进入正式测试的时点与冻结条件：<...>
 - 任务集合、开发/保留任务用途与纳入规则：<声称跨任务适用时填写；否则注明单任务范围>
 - 机制/规则消融、固定配置对照及资源成本：<按主张触发，不适用需说明>
 - 随机性来源、重复策略和不确定性表示：<...>
 - 运行有效性检查、停止条件和完成判据：<...>
-- 目标复现等级及范围：<...>
+- 目标复现等级及范围：<L0–L3 定义见 [reproduction.md](reproduction.md)，也可直接写要重跑的步骤>
+
+## 自动配置与候选选型（仅当方法涉及时填写；固定配置项目整节写“不适用”）
+
+- `fingerprint_id/version / policy_id/version`: <任务画像和配置策略，见 [configuration-policy.md](configuration-policy.md)>
+- 固定设计、规则生成和经验选择的责任边界：<引用 ConfigurationPolicy；手动例外需记录>
+- 候选清单生成、排除、失败和最终选择的记录位置：<...>

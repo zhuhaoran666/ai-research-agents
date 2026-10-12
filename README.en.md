@@ -4,18 +4,18 @@
 
 A portable framework for research collaboration: start with a problem and an initial idea, investigate prior work, co-design methods and experiments, implement and analyze them, write the paper and figures, and seek an independent review of substantive issues. Researchers lead scientific judgment and key experimental design; agents support literature search, implementation, execution, analysis, and testable improvements.
 
-**This repository provides role instructions, workflows, and optional templates. It is not an implemented autonomous execution platform.** Use the roles in a multi-agent tool or apply them sequentially with one agent. The framework is not tied to a model, orchestrator, discipline, publication venue, or compute environment.
+**This repository provides role instructions, workflows, and optional templates. It is not an implemented autonomous execution platform, and it does not aim at fully autonomous research.** It is a human-in-the-loop framework: researchers take part in and confirm key decisions (see "Human in the loop" in the [shared conventions](agents/README.md)), and agents proceed within the confirmed scope. Use the roles in a multi-agent tool or apply them sequentially with one agent. The framework is not tied to a model, orchestrator, discipline, publication venue, or compute environment.
 
 ## Quick start
 
 1. Copy [`profiles/user.example.md`](profiles/user.example.md) to local `profiles/user.md`. Record only preferences relevant to collaboration; the local file is ignored by Git.
 2. For an initial idea, use the [idea description guide](docs/idea-guideline.md) and optional [short template](templates/idea.md), currently in Chinese. Describe the task, observations and their sources, possible explanations, proposed method, and what you want to do next. You can start without a method. Put existing materials and subsequent progress in one [research note](templates/research-note.md).
-3. Give the main agent [`agents/README.md`](agents/README.md), [`agents/mentor.md`](agents/mentor.md), the local profile, and the research note. Load other role instructions as needed. Sequential use works without a multi-agent orchestrator.
+3. Give the main agent [`agents/README.md`](agents/README.md), [`agents/mentor.md`](agents/mentor.md), the local profile, and the research note. Load other role instructions, together with their companion files (see the loading table in [`agents/README.md`](agents/README.md)), as needed. Sequential use works without a multi-agent orchestrator.
 4. Start where the project needs help. A new idea often starts with `literature + method`; existing code or results can go to `code + analysis`. Use `writing` for the manuscript and an independent `reviewer` for its final assessment.
 
 A starting task to adapt:
 
-> Read the shared principles, mentor and literature role instructions, and this project's research note. Cover PaperNotes, Google Scholar, and arXiv, plus conferences and journals appropriate to the field. Medical imaging research must cover MICCAI, ISBI, Medical Image Analysis, IEEE TMI, and TPAMI. For embodied intelligence and robotics, prioritize IROS and ICRA, adding RSS and CoRL as the task requires. First investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State what you actually searched and read, and verify key claims against original papers. Keep proposed work distinct from completed results.
+> Read the shared principles, mentor and literature role instructions, and this project's research note. Search the core sources and the field's conferences and journals listed in the [source list](docs/literature-sources.md). First investigate existing solutions, the closest strong baselines, and their relevant limitations. Identify the evidence that most affects the initial idea and suggest two experiments to design together. State what you actually searched and read, and verify key claims against original papers. Keep proposed work distinct from completed results.
 
 ## Seven responsibilities
 
@@ -45,5 +45,6 @@ These are responsibilities, not seven required persistent processes. Keep writin
 - [Literature, writing, and review](docs/literature-and-writing.md) · [Search sources by field](docs/literature-sources.md) · [Personalization](docs/personalization.md)
 - [Optional templates](templates/README.md) · [Examples](examples/README.md)
 - [Comparison with AutoResearch projects](docs/prior-art.md) · [Lessons from nnU-Net's research design](docs/nnunet-lessons.md)
+- [Lessons from real use (2026-10)](docs/lessons-2026-10.md) · [Changelog](CHANGELOG.md)
 
-The linked role instructions and detailed documentation are currently in Chinese. Local `profiles/user.md` and project research materials stay outside version control by default. Keep private data, credentials, unlicensed paper copies, and raw source caches out of the public repository.
+The linked role instructions and detailed documentation are currently in Chinese. Local `profiles/user.md` and project research materials stay outside version control by default (`.gitignore` also excludes `studies/` and `docs/reference/`, which you can create for local projects and reference material). Keep private data, credentials, unlicensed paper copies, and raw source caches out of the public repository.

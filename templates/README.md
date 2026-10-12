@@ -7,8 +7,9 @@
 | [idea.md](idea.md) | 描述研究起点，区分观察、原因猜测和初步方法；未知可留空 |
 | [research-note.md](research-note.md) | 一个文件组织问题、文献、方法、实验和发现 |
 | [task.md](task.md) | 分派较独立的工作时，可用几行说明任务 |
-| [run-record.md](run-record.md) | 已有日志不足时，补充主要运行的复现信息 |
+| [run-record.md](run-record.md) | 已有日志不足时，补充主要运行的复现信息；其 `run_id` 供结果主张、优化提案等模板引用 |
 | [manuscript-review.md](manuscript-review.md) | 最终文献审稿或局部反馈：阅读范围、实质问题、依据与最小修订 |
+| [handoff.md](handoff.md) | 交出或接手进行中的课题：名称表、主张与对照、冻结决定的依据、运行中的任务 |
 
 以下为可选扩展；只在实际需要时使用相关字段，不要求逐一填写。
 

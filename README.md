@@ -4,18 +4,18 @@
 
 一个可移植的研究协作框架：从问题和初步想法出发，检索已有工作，共同设计方法与实验，执行和分析结果，写作画图，再由独立审稿角色检查实质问题。研究者负责科学判断和关键实验设计；Agent 负责检索、实现、运行、分析和提出可验证的改进。
 
-**本仓库提供角色指令、工作流与可选模板，不是已经实现的自动运行平台。** 可以在支持多 Agent 的工具中分配角色，也可以让同一个 Agent 按任务依次使用这些指令；不绑定模型、编排器、学科、论文 venue 或计算环境。
+**本仓库提供角色指令、工作流与可选模板，不是已经实现的自动运行平台，也不追求全自动科研。** 它是人在回路（human-in-the-loop）的协作框架：研究者在关键决策点参与并确认（见[共享约定](agents/README.md)的“人在回路”），Agent 在已确认的范围内推进。可以在支持多 Agent 的工具中分配角色，也可以让同一个 Agent 按任务依次使用这些指令；不绑定模型、编排器、学科、论文 venue 或计算环境。
 
 ## 快速开始
 
 1. 将 [`profiles/user.example.md`](profiles/user.example.md) 复制为本地 `profiles/user.md`，只填写与协作有关的偏好；该文件默认不纳入 Git。
 2. 有初步 idea 时，先看[怎样描述一个 idea](docs/idea-guideline.md)，用几句话或[简短模板](templates/idea.md)说明任务、观察依据、原因猜测、初步方法与这次目标；暂无方法也可以开始。已有材料可直接整理进[研究笔记](templates/research-note.md)，后续持续维护同一份笔记。
-3. 给主 Agent 加载 [`agents/README.md`](agents/README.md)、[`agents/mentor.md`](agents/mentor.md)、本地用户档案和研究笔记。具体任务再加载相应角色指令；没有多 Agent 编排器时也可顺序执行。
+3. 给主 Agent 加载 [`agents/README.md`](agents/README.md)、[`agents/mentor.md`](agents/mentor.md)、本地用户档案和研究笔记。具体任务再加载相应角色指令及其配套文件（见 [`agents/README.md`](agents/README.md) 的“加载清单”）；没有多 Agent 编排器时也可顺序执行。
 4. 从当前最需要的工作开始。新 idea 通常先用 `literature + method`；已有代码或结果可直接进入 `code + analysis`；稿件交给 `writing`，最终由独立的 `reviewer` 审查。
 
 一个可直接改写的起始任务：
 
-> 阅读共享原则、导师和文献检索角色指令，以及本项目研究笔记。检索必须覆盖 PaperNotes、Google Scholar、arXiv，并按领域检索会议与期刊：医学图像覆盖 MICCAI、ISBI、MIA、TMI、TPAMI；具身智能重点查 IROS、ICRA，并按任务补查 RSS、CoRL。先查这个问题的已有解法、最接近的强基线与关键局限；列出对初步想法最有影响的证据和两个值得共同设计的验证实验。注明实际检索和阅读范围，关键判断回到原论文，不把计划写成已经完成的结果。
+> 阅读共享原则、导师和文献检索角色指令，以及本项目研究笔记。检索按[来源清单](docs/literature-sources.md)覆盖核心来源和本领域的会议、期刊。先查这个问题的已有解法、最接近的强基线与关键局限；列出对初步想法最有影响的证据和两个值得共同设计的验证实验。注明实际检索和阅读范围，关键判断回到原论文，不把计划写成已经完成的结果。
 
 ## 七种职责
 
@@ -45,5 +45,6 @@
 - [文献、写作与审稿](docs/literature-and-writing.md) · [检索来源与领域选择](docs/literature-sources.md) · [个性化机制](docs/personalization.md)
 - [按需模板](templates/README.md) · [虚构项目示例](examples/README.md)
 - [已有 AutoResearch 项目对照](docs/prior-art.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)
+- [真实使用复盘（2026-10）](docs/lessons-2026-10.md) · [版本记录](CHANGELOG.md)
 
-`profiles/user.md` 和具体研究材料默认留在本地。不要把私有数据、凭证、未获许可的论文全文或原始缓存加入公开仓库。
+`profiles/user.md` 和具体研究材料默认留在本地（`.gitignore` 也排除了 `studies/` 与 `docs/reference/`，可分别用来放本地研究项目和参考材料，需要时自行创建）。不要把私有数据、凭证、未获许可的论文全文或原始缓存加入公开仓库。
