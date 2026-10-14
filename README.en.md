@@ -10,8 +10,8 @@ A portable framework for research collaboration: start with a problem and an ini
 
 1. Copy [`profiles/user.example.md`](profiles/user.example.md) to local `profiles/user.md`. Record only preferences relevant to collaboration; the local file is ignored by Git.
 2. For an initial idea, use the [idea description guide](docs/idea-guideline.md) and optional [short template](templates/idea.md), currently in Chinese. Describe the task, observations and their sources, possible explanations, proposed method, and what you want to do next. You can start without a method. Put existing materials and subsequent progress in one [research note](templates/research-note.md).
-3. Give the main agent [`agents/README.md`](agents/README.md), [`agents/mentor.md`](agents/mentor.md), the local profile, and the research note. Load other role instructions, together with their companion files (see the loading table in [`agents/README.md`](agents/README.md)), as needed. Sequential use works without a multi-agent orchestrator.
-4. Start where the project needs help. A new idea often starts with `literature + method`; existing code or results can go to `code + analysis`. Use `writing` for the manuscript and an independent `reviewer` for its final assessment.
+3. Give the main agent [`agents/README.md`](agents/README.md), [`agents/mentor.md`](agents/mentor.md), the local profile, and the research note. All roles also load the [RSI conventions](docs/rsi.md) and applicable local improvement records. Load other role instructions with their companion files (see the loading table in [`agents/README.md`](agents/README.md)) as needed. Sequential use works without a multi-agent orchestrator.
+4. Start where the project needs help. A new idea often starts with `literature + method`; existing code or results can go to `code + analysis`. Use `writing` for the manuscript and the `reviewer` entry point to assign independent writing and domain experts for final review.
 
 A starting task to adapt:
 
@@ -26,10 +26,10 @@ A starting task to adapt:
 | [`code`](agents/code.md) | Implement and run baselines, methods, and ablations; preserve configurations, logs, and reproduction instructions |
 | [`analysis`](agents/analysis.md) | Verify results, diagnose failures, and propose further comparisons with the method role |
 | [`writing`](agents/paper-writer.md) | Read comparable papers closely; write and create research figures from actual evidence |
-| [`reviewer`](agents/manuscript-reviewer.md) | Independently investigate the literature and assess contributions, methods, comparisons, and conclusions |
+| [`reviewer`](agents/manuscript-reviewer.md) | Two independent experts assess academic language, field-specific writing conventions, and substantive research issues |
 | [`mentor`](agents/mentor.md) | Coordinate direction, priorities, and collaboration; clarify important intent and maintain preferences |
 
-These are responsibilities, not seven required persistent processes. Keep writing and review separate when independent judgment is needed. Other roles may be combined or supplemented with temporary specialists.
+These are responsibilities, not seven required persistent processes. Review contains a [writing expert, `review-writing`](agents/writing-reviewer.md), who checks grammar, word choice, terminology, and academic expression, and a [domain expert, `review-domain`](agents/domain-reviewer.md), who reads comparable papers from leading journals and conferences to assess argument, structure, experiments, and figures, as well as research validity. Both remain independent of the manuscript authoring role and produce separate reports for the mentor to consolidate. `reviewer` is a dispatch entry point, not a third reviewer. Other roles may be combined or supplemented with temporary specialists.
 
 ## Principles
 
@@ -37,12 +37,13 @@ These are responsibilities, not seven required persistent processes. Keep writin
 - **Keep researchers involved in design.** Researchers choose problems, hypotheses, key experiments, and major tradeoffs. Agents actively identify weaknesses, feasibility limits, and alternative explanations.
 - **Let experiments and writing inform each other.** Enter at any point supported by the available materials; there are no mandatory stage gates.
 - **Make results traceable.** Connect major claims to actual code, configurations, data descriptions, run outputs, and analysis. Preserve negative results too.
-- **Review substantive issues independently.** Reviewers search beyond the author's references and assess whether the argument holds before addressing wording details.
+- **Let every role improve its own work.** Agents use user requirements, feedback, and actual outcomes to revise strategies and role instructions, including how they diagnose and verify improvements. Check changes against real materials, keep unverified strategies provisional, and preserve a way to revert. [RSI](docs/rsi.md) is applied as needed, with no extra permanent role or per-step approval process.
+- **Use two independent review perspectives.** Writing and domain experts may review in parallel; consolidation prioritizes issues that affect research validity. Domain experts search beyond the author's references and support comparisons of writing conventions with actual source passages.
 
 ## Documentation
 
 - [Idea description guide](docs/idea-guideline.md) · [Architecture and collaboration](docs/architecture.md) · [Lightweight workflow](docs/workflows.md) · [Task coordination](docs/operating-model.md)
-- [Literature, writing, and review](docs/literature-and-writing.md) · [Search sources by field](docs/literature-sources.md) · [Personalization](docs/personalization.md)
+- [Literature, writing, and review](docs/literature-and-writing.md) · [Search sources by field](docs/literature-sources.md) · [Personalization](docs/personalization.md) · [RSI for all roles](docs/rsi.md)
 - [Optional templates](templates/README.md) · [Examples](examples/README.md)
 - [Comparison with AutoResearch projects](docs/prior-art.md) · [Lessons from nnU-Net's research design](docs/nnunet-lessons.md)
 - [Lessons from real use (2026-10)](docs/lessons-2026-10.md) · [Changelog](CHANGELOG.md)
