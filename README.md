@@ -44,6 +44,7 @@
 
 - [idea 描述指南](docs/idea-guideline.md) · [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
 - [文献、写作与审稿](docs/literature-and-writing.md) · [检索来源与领域选择](docs/literature-sources.md) · [个性化机制](docs/personalization.md) · [所有角色的 RSI](docs/rsi.md)
+- [中文学术写作规则](docs/chinese-academic-writing.md)：领域惯用术语、具体现象、自然句法与科学含义核对
 - [按需模板](templates/README.md) · [虚构项目示例](examples/README.md)
 - [已有 AutoResearch 项目对照](docs/prior-art.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)
 - [真实使用复盘（2026-10）](docs/lessons-2026-10.md) · [版本记录](CHANGELOG.md)
