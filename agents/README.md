@@ -25,10 +25,10 @@
 | `method` | 研究笔记与文献比较；需要完整协议时用[实验规格](../templates/experiment-spec.md) |
 | `code` | 研究笔记与方法计划；补运行信息时用[实验记录](../templates/run-record.md) |
 | `analysis` | 方法计划与运行记录；需要保存证据时用[结果主张](../templates/result-claim.md) |
-| `writing` | [文献与写作协作](../docs/literature-and-writing.md)、研究笔记中的结果与阅读索引；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |
+| `writing` | [自有写作 Skill](../skills/research-paper-writing/SKILL.md)、[文献与写作协作](../docs/literature-and-writing.md)、研究笔记中的结果与阅读索引；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |
 | `reviewer` | [双专家入口](manuscript-reviewer.md)，按任务分别加载下列两个角色 |
-| `review-writing` | [写作专家](writing-reviewer.md)、双专家入口、[文献与写作协作](../docs/literature-and-writing.md)、[审稿报告](../templates/manuscript-review.md)；稿件与目标学术表达要求；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |
-| `review-domain` | [领域专家](domain-reviewer.md)、双专家入口、[文献与写作协作](../docs/literature-and-writing.md)、[来源清单](../docs/literature-sources.md)、[审稿报告](../templates/manuscript-review.md)；稿件、实验材料与可用原文 |
+| `review-writing` | [写作专家](writing-reviewer.md)、双专家入口、[自有写作 Skill](../skills/research-paper-writing/SKILL.md)的段落与语言部分、[文献与写作协作](../docs/literature-and-writing.md)、[审稿报告](../templates/manuscript-review.md)；稿件与目标学术表达要求；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |
+| `review-domain` | [领域专家](domain-reviewer.md)、双专家入口、[自有写作 Skill](../skills/research-paper-writing/SKILL.md)的主线与证据部分、[文献与写作协作](../docs/literature-and-writing.md)、[来源清单](../docs/literature-sources.md)、[审稿报告](../templates/manuscript-review.md)；稿件、实验材料与可用原文 |
 
 两个专家使用同一稿件版本，首轮不加载写作角色的自评或另一专家的意见作为结论依据，分别形成判断；只有角色切换、没有独立上下文时，如实披露独立性限制。
 

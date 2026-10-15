@@ -44,6 +44,7 @@ These are responsibilities, not seven required persistent processes. Review cont
 
 - [Idea description guide](docs/idea-guideline.md) · [Architecture and collaboration](docs/architecture.md) · [Lightweight workflow](docs/workflows.md) · [Task coordination](docs/operating-model.md)
 - [Literature, writing, and review](docs/literature-and-writing.md) · [Search sources by field](docs/literature-sources.md) · [Personalization](docs/personalization.md) · [RSI for all roles](docs/rsi.md)
+- [Framework-owned skills](skills/README.md) · [Research paper writing](skills/research-paper-writing/SKILL.md) · [Source learning notes](skills/research-paper-writing/references/source-notes.md)
 - [Optional templates](templates/README.md) · [Examples](examples/README.md)
 - [Comparison with AutoResearch projects](docs/prior-art.md) · [Lessons from nnU-Net's research design](docs/nnunet-lessons.md)
 - [Lessons from real use (2026-10)](docs/lessons-2026-10.md) · [Changelog](CHANGELOG.md)
