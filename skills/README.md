@@ -4,7 +4,7 @@ Skill 保存可复用的工作方法；Agent 角色负责分工、协作和独�
 
 | Skill | 何时使用 | 配套材料 |
 |---|---|---|
-| [research-paper-writing](research-paper-writing/SKILL.md) | AI 论文的起草、重组、修订与对应审稿任务；按当前章节与角色选择动作 | [来源学习记录](research-paper-writing/references/source-notes.md)、仓库内的[中文写作规则](../docs/chinese-academic-writing.md) |
+| [research-paper-writing](research-paper-writing/SKILL.md) | AI 论文的起草、重组、修订与对应审稿任务；按当前章节与角色选择动作 | [论文案例](research-paper-writing/references/source-notes.md)、[引言指南核读](research-paper-writing/references/introduction-guides.md)、仓库内的[中文写作规则](../docs/chinese-academic-writing.md) |
 
 ## 怎样加载与移植
 
