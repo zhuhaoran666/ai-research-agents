@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.75,
+  "correct": 3,
+  "total": 4,
+  "checks": {
+    "unique_ids": true,
+    "exact_split_membership": true,
+    "allowed_labels": true
+  }
+}

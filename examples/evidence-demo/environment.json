@@ -1,0 +1,6 @@
+{
+  "purpose": "synthetic evidence-chain demonstration, not a research environment",
+  "python": ">=3.9",
+  "dependencies": "Python standard library only",
+  "hardware": "not measured; no model training performed"
+}

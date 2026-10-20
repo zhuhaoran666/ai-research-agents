@@ -1,0 +1,6 @@
+{
+  "labels": [0, 1],
+  "metric": "accuracy",
+  "aggregation": "correct predictions / all four records",
+  "selection_scope": "fixed synthetic demonstration; no tuning"
+}
