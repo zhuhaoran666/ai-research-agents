@@ -17,6 +17,7 @@
 |---|---|
 | [brief.md](brief.md) | 需要独立研究简报时 |
 | [experiment-spec.md](experiment-spec.md) | 多人协作或复杂比较，需要更完整协议时 |
+| [run-manifest.example.json](run-manifest.example.json) | 希望自动核对产物哈希、指标来源和声明值时；由项目工具维护，见[使用说明与限制](../docs/experiment-loop.md)和[合成示例](../examples/evidence-demo/README.md) |
 | [claim-evidence-matrix.md](claim-evidence-matrix.md) | 论文主张较多，需要梳理证据缺口时 |
 | [configuration-policy.md](configuration-policy.md) | 方法涉及自动配置或候选选型时 |
 | [feasibility.md](feasibility.md) | 数据、实现或算力存在较多未知时 |

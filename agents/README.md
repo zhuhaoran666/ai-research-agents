@@ -20,11 +20,11 @@
 
 | 角色 | 一并加载 |
 |---|---|
-| `mentor` | 本地用户档案、研究笔记；派工字段见[任务模板](../templates/task.md)；接手已有项目时用[交接说明](../templates/handoff.md) |
+| `mentor` | [逐步引导](../docs/mentor-guided-intake.md)、已有研究材料与笔记、本地用户档案（如有）；派工字段见[任务模板](../templates/task.md)；接手已有项目时用[交接说明](../templates/handoff.md) |
 | `literature` | [文献来源与领域选择](../docs/literature-sources.md)、[文献与写作协作](../docs/literature-and-writing.md) |
 | `method` | 研究笔记与文献比较；需要完整协议时用[实验规格](../templates/experiment-spec.md) |
-| `code` | 研究笔记与方法计划；补运行信息时用[实验记录](../templates/run-record.md) |
-| `analysis` | 方法计划与运行记录；需要保存证据时用[结果主张](../templates/result-claim.md) |
+| `code` | 研究笔记与方法计划、[实验反馈与恢复](../docs/experiment-loop.md)；补运行信息时用[实验记录](../templates/run-record.md) |
+| `analysis` | 方法计划与运行记录、[实验反馈与证据链](../docs/experiment-loop.md)；需要保存证据时用[结果主张](../templates/result-claim.md) |
 | `writing` | [自有写作 Skill](../skills/research-paper-writing/SKILL.md)、[文献与写作协作](../docs/literature-and-writing.md)、研究笔记中的结果与阅读索引；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |
 | `reviewer` | [双专家入口](manuscript-reviewer.md)，按任务分别加载下列两个角色 |
 | `review-writing` | [写作专家](writing-reviewer.md)、双专家入口、[自有写作 Skill](../skills/research-paper-writing/SKILL.md)的段落与语言部分、[文献与写作协作](../docs/literature-and-writing.md)、[审稿报告](../templates/manuscript-review.md)；稿件与目标学术表达要求；中文任务另加载[中文学术写作规则](../docs/chinese-academic-writing.md) |

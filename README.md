@@ -8,14 +8,16 @@
 
 ## 快速开始
 
-1. 将 [`profiles/user.example.md`](profiles/user.example.md) 复制为本地 `profiles/user.md`，只填写与协作有关的偏好；该文件默认不纳入 Git。
-2. 有初步 idea 时，先看[怎样描述一个 idea](docs/idea-guideline.md)，用几句话或[简短模板](templates/idea.md)说明任务、观察依据、原因猜测、初步方法与这次目标；暂无方法也可以开始。已有材料可直接整理进[研究笔记](templates/research-note.md)，后续持续维护同一份笔记。
+1. 直接把想法、代码、结果或稿件交给导师 Agent，说清这次想解决什么。导师按[逐步引导](docs/mentor-guided-intake.md)判断起点，每轮只问一至三个影响下一步的问题；未知的文献、基线与环境由相关 Agent 帮助调查，不要求先填完整表格。
+2. 有初步 idea 时，可参考[怎样描述一个 idea](docs/idea-guideline.md)或[简短模板](templates/idea.md)；暂无方法也可以开始。导师将已有材料与后续回答逐步整理进同一份[研究笔记](templates/research-note.md)。需要长期偏好时，再将 [`profiles/user.example.md`](profiles/user.example.md) 复制为本地 `profiles/user.md`；没有档案也能工作，该文件默认不纳入 Git。
 3. 给主 Agent 加载 [`agents/README.md`](agents/README.md)、[`agents/mentor.md`](agents/mentor.md)、本地用户档案和研究笔记。所有角色同时加载 [RSI 约定](docs/rsi.md)及适用的本地改进经验；具体任务再加载相应角色指令及其配套文件（见 [`agents/README.md`](agents/README.md) 的“加载清单”）。没有多 Agent 编排器时也可顺序执行。
 4. 从当前最需要的工作开始。新 idea 通常先用 `literature + method`；已有代码或结果可直接进入 `code + analysis`；稿件交给 `writing`，最终通过 `reviewer` 入口安排独立的写作专家和领域专家审查。
 
 一个可直接改写的起始任务：
 
-> 阅读共享原则、导师和文献检索角色指令，以及本项目研究笔记。检索按[来源清单](docs/literature-sources.md)覆盖核心来源和本领域的会议、期刊。先查这个问题的已有解法、最接近的强基线与关键局限；列出对初步想法最有影响的证据和两个值得共同设计的验证实验。注明实际检索和阅读范围，关键判断回到原论文，不把计划写成已经完成的结果。
+> 阅读共享原则和导师角色指令，复用本项目已有材料。这次我想解决：……。先判断我当前的起点，告诉我下一步需要补充的最少信息，每轮只问一至三个关键问题；不清楚的专业信息请协助调查并给出有依据的选项。信息够用就推进，等待回答时继续不依赖答案的工作，把共识和待查项维护在同一份研究笔记中。
+
+进入实验后，按[实验反馈与证据链](docs/experiment-loop.md)接入现有运行环境，区分工程失败、有效负结果和证据不足。仓库还提供一个可选的 Python 标准库[证据检查器](scripts/check_evidence.py)，用于核对文件、指标来源与声明数字；它不执行实验，也不能代替科学审查。
 
 ## 七种职责
 
@@ -27,7 +29,7 @@
 | [`analysis`](agents/analysis.md) | 复核结果、诊断失败，与方法角色提出下一轮比较 |
 | [`writing`](agents/paper-writer.md) | 精读同类论文，基于真实证据写作并制作科研图表 |
 | [`reviewer`](agents/manuscript-reviewer.md) | 双专家独立审稿：学术语言审校、领域写法对照及实质研究审查 |
-| [`mentor`](agents/mentor.md) | 统筹方向、优先级和协作，澄清重要意图并维护偏好 |
+| [`mentor`](agents/mentor.md) | 逐步引导用户补齐当前所需信息，统筹方向、优先级和协作 |
 
 这些是职责，不要求七个常驻进程。审稿模块分为[写作专家 `review-writing`](agents/writing-reviewer.md)和[领域专家 `review-domain`](agents/domain-reviewer.md)：前者检查语法、用词和学术表达，后者实际对照同方向顶刊顶会的论证、结构、实验与图表写法，并保留方法、贡献和证据的实质审查。两者独立于写作画图 Agent，分别出意见后由导师汇总；`reviewer` 是派工入口，不是额外第三位审稿人。其他角色可以合并或临时增加专长。
 
@@ -42,12 +44,13 @@
 
 ## 导航
 
-- [idea 描述指南](docs/idea-guideline.md) · [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
+- [导师逐步引导](docs/mentor-guided-intake.md) · [idea 描述指南](docs/idea-guideline.md) · [架构与角色协作](docs/architecture.md) · [轻量工作流](docs/workflows.md) · [日常任务调度](docs/operating-model.md)
+- [实验反馈与证据链](docs/experiment-loop.md) · [可运行的合成证据示例](examples/evidence-demo/README.md)
 - [文献、写作与审稿](docs/literature-and-writing.md) · [检索来源与领域选择](docs/literature-sources.md) · [个性化机制](docs/personalization.md) · [所有角色的 RSI](docs/rsi.md)
 - [中文学术写作规则](docs/chinese-academic-writing.md)：领域惯用术语、具体现象、自然句法与科学含义核对
 - [框架自有 Skill](skills/README.md) · [文献与证据驱动的科研写作](skills/research-paper-writing/SKILL.md) · [来源学习记录](skills/research-paper-writing/references/source-notes.md)
 - [按需模板](templates/README.md) · [虚构项目示例](examples/README.md)
-- [已有 AutoResearch 项目对照](docs/prior-art.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)
+- [已有 AutoResearch 项目对照](docs/prior-art.md) · [The AI Scientist 的启发与边界](docs/ai-scientist-lessons.md) · [nnU-Net 的跨任务研究启发](docs/nnunet-lessons.md)
 - [真实使用复盘（2026-10）](docs/lessons-2026-10.md) · [版本记录](CHANGELOG.md)
 
 `profiles/user.md` 和具体研究材料默认留在本地（`.gitignore` 也排除了 `studies/` 与 `docs/reference/`，可分别用来放本地研究项目和参考材料，需要时自行创建）。不要把私有数据、凭证、未获许可的论文全文或原始缓存加入公开仓库。

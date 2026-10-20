@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "run_id": "synthetic-demo-001",
+  "spec": {
+    "id": "synthetic-accuracy-demo",
+    "version": "1",
+    "artifact": "spec"
+  },
+  "parent_run_id": null,
+  "reason": "Synthetic demonstration of artifact integrity and numeric evidence links; no research claim.",
+  "status": "completed",
+  "validity": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "unique prediction IDs, exact split membership and allowed labels",
+        "status": "passed",
+        "evidence": [
+          "code",
+          "predictions",
+          "split",
+          "metrics"
+        ]
+      }
+    ]
+  },
+  "provenance": {
+    "code_revision": "synthetic-demo-snapshot-v1",
+    "code_artifact": "code",
+    "config_artifact": "config",
+    "data_id": "synthetic-four-records",
+    "data_version": "1",
+    "split_artifact": "split",
+    "environment_artifact": "environment"
+  },
+  "evaluation": {
+    "protocol_id": "synthetic-binary-accuracy",
+    "protocol_version": "1",
+    "split_id": "synthetic-test-v1",
+    "selection_scope": "fixed synthetic demonstration; no tuning",
+    "aggregation": "correct predictions / all four records"
+  },
+  "job": {
+    "id": null,
+    "backend": "local synthetic evaluation",
+    "last_checked_at": null
+  },
+  "budget": {
+    "unit": "evaluation_calls",
+    "limit": 1,
+    "used": 1,
+    "remaining": 0,
+    "max_attempts": 1,
+    "attempt": 1,
+    "stop_reason": "synthetic demonstration completed; counters are illustrative"
+  },
+  "artifacts": [
+    {
+      "id": "spec",
+      "path": "experiment-spec.md",
+      "sha256": "f66194db207c8c731978cba0813e090abeb1bbd6f002d0993b127f8a5b4bf3c5"
+    },
+    {
+      "id": "code",
+      "path": "evaluate.py",
+      "sha256": "623265207fee8d8ef5754d0ef74821ef555713a0f5208e041a15b2aab65455be"
+    },
+    {
+      "id": "config",
+      "path": "config.json",
+      "sha256": "ca985306d0f891a8cca936641ec7df80a7e300301f245379686ea03ae4d61bd4"
+    },
+    {
+      "id": "predictions",
+      "path": "predictions.json",
+      "sha256": "c0b2c45b2431171fa71334efe3286d88c74459f3af74037c4b50428d166eb1c8"
+    },
+    {
+      "id": "split",
+      "path": "split.json",
+      "sha256": "05ac8ae9d6caf62bcf91ff79d632707479476a2f318519fdcc9945812848f7b5"
+    },
+    {
+      "id": "environment",
+      "path": "environment.json",
+      "sha256": "0e0aa11eb469b972ad7c1f4227487f4106cf9b2a0272547866b306adb0e22810"
+    },
+    {
+      "id": "metrics",
+      "path": "metrics.json",
+      "sha256": "640e91043d95d1b974ba2dfe40887189d6a93e3bb369aa5c72c83bff86a3ac4c"
+    },
+    {
+      "id": "report",
+      "path": "report.md",
+      "sha256": "0741c5baf43aad21832f59eeec04456d1dbe80e6fa27f8fd7546b2bbf47dc382"
+    }
+  ],
+  "metrics": {
+    "accuracy": {
+      "value": 0.75,
+      "definition": "number of correct predicted labels / number of records in the declared split",
+      "unit": "fraction",
+      "direction": "higher",
+      "source_artifact": "metrics",
+      "pointer": "/accuracy"
+    }
+  },
+  "claims": [
+    {
+      "id": "synthetic-claim-001",
+      "text": "The synthetic demonstration has accuracy 0.75 (3 correct predictions / 4 records).",
+      "metric": "accuracy",
+      "reported_value": 0.75,
+      "absolute_tolerance": 0,
+      "artifact": "report",
+      "location": "report.md:5"
+    }
+  ]
+}
