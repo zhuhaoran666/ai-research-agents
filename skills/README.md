@@ -1,15 +1,33 @@
-# 框架自有 Skill
+# 角色技能索引
 
-Skill 保存可复用的工作方法；Agent 角色负责分工、协作和独立判断。本目录属于本研究框架，不要求使用框架外的 Skill。
+本系统为十个现有角色各维护一项主技能，另有协作入口和通用代码维护专长，共十二项。角色文件负责分工与交接，技能保存可复用方法；单项任务直接调用对应技能，不要求先启动整套科研流程。
 
-| Skill | 何时使用 | 配套材料 |
+## 每个 Agent 的主技能
+
+| 框架角色 / Codex 角色 | 主技能 | 具体职责 |
 |---|---|---|
-| [research-paper-writing](research-paper-writing/SKILL.md) | AI 论文的起草、重组、修订与对应审稿任务；按当前章节与角色选择动作 | [论文案例](research-paper-writing/references/source-notes.md)、[引言指南核读](research-paper-writing/references/introduction-guides.md)、仓库内的[中文写作规则](../docs/chinese-academic-writing.md) |
+| `mentor` / `research-mentor` | [research-mentor](research-mentor/SKILL.md) | 定位当前瓶颈、优先级、派工与连续交接 |
+| `literature` / `research-literature` | [research-literature](research-literature/SKILL.md) | 最接近工作、强基线、反证与真实核读 |
+| `method` / `research-method` | [research-method](research-method/SKILL.md) | 机制假设、区分性验证、公平协议与取舍 |
+| `code` / `research-code` | [research-code](research-code/SKILL.md) | 真实实现、运行状态、恢复与复现产物 |
+| `analysis` / `research-analysis` | [research-analysis](research-analysis/SKILL.md) | 原始复算、可比性、失败诊断与主张范围 |
+| `writing` / `research-writing` | [research-paper-writing](research-paper-writing/SKILL.md) | 以真实材料组织论证、正文与图表叙事 |
+| `reviewer` / `research-reviewer` | [research-reviewer](research-reviewer/SKILL.md) | 同版材料、独立派工、原报告与问题整合 |
+| `review-writing` / `research-review-writing` | [research-review-writing](research-review-writing/SKILL.md) | 有定位的语言审校与科学含义保持 |
+| `review-domain` / `research-review-domain` | [research-review-domain](research-review-domain/SKILL.md) | 原文和实际证据支持的研究与论证审查 |
+| `review-redundancy` / `research-review-redundancy` | [research-review-redundancy](research-review-redundancy/SKILL.md) | 按请求检测冗余，或交付保持原意的精简稿 |
 
-## 怎样加载与移植
+## 协作入口与代码维护
 
-在当前仓库中，给相应角色加载 `skills/research-paper-writing/SKILL.md` 与任务材料即可；细分职责见[角色加载清单](../agents/README.md)。来源笔记用于理解和追溯学习依据，需要时再读，不要求每次整份加载。共享规则与本 Skill 复用同一讨论确认要求：任何操作和发散 idea 先与用户讨论，操作明确确认后执行；不设固定写作阶段。
+- [ai-research-workflow](ai-research-workflow/SKILL.md)：根据当前材料连接所需角色、共享证据和交接；不重复执行导师或专家的全部工作。
+- [readable-code-engineer](readable-code-engineer/SKILL.md)：可读代码、轻量环境、渐进重构和维护入口。科研实现由 `research-code` 按需组合，普通工程可单独使用。
 
-跨工具移植时携带整个 `research-paper-writing/` 文件夹，保留 `SKILL.md` 与 `references/` 的相对路径。入口包含独立使用所需的核心动作，来源记录用于参考；科研事实仍要核读当前课题原文。依目标工具的 Skill 目录或显式文件加载机制使用，不能仅因文件存在就声称运行器已自动发现。
+## 加载、复用与移植
 
-本次仅创建仓库内 Skill 并接入角色指令；未安装到全局 Skill 目录，未下载或执行外部 Skill。写作策略来自有限案例的归纳，效果需后续真实任务检验；新反馈按 [RSI](../docs/rsi.md)修订，并保留 Git 版本。
+从当前问题选择一项主技能，只加载其任务所需参考。纯语言润色、完整综述、专业统计、成像研究与文件制作可按需复用本机已有专长；不叠加所有技能的流程，也不改动其他个人技能。
+
+单项技能复制整个目录，保留实际存在的 `SKILL.md`、`agents/`、`references/` 和 `assets/`。角色主技能能独立使用；写作来源记录按需读取。协作入口通过相邻目录连接角色技能，移植该入口时需一并携带本次会用到的角色目录。代码维护模板按项目适配，不覆盖已有约定。
+
+仓库内角色加载见[共享入口](../agents/README.md)。客户端须使用自己的技能发现或显式文件加载机制；文件存在不等于角色已启动，格式校验不等于行为或科学有效性得到验证。
+
+以本仓库为分发源，修改后同步安装副本并核对资源、路径和角色绑定。用户当前要求与项目约定优先；复用已有授权，保留科研判断、数据和资源边界，不新增永久进程或对外发布权限。私人档案、研究数据与未获许可的来源全文不进入技能包。

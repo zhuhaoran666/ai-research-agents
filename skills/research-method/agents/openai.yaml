@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研方法与验证设计"
+  short_description: "把研究问题转成可检验假设与最小实验，比较机制、公平性、资源和停止条件"
+  default_prompt: "使用 $research-method，基于现有问题、方案与证据，设计能区分解释的最小验证计划，并说明可行性和关键取舍。"

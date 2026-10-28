@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研论文写作"
+  short_description: "用作者真实材料组织研究主线、机制和证据，完成起草重组与局部润色"
+  default_prompt: "请使用 $research-paper-writing，根据我的真实材料完成指定范围的论文写作，核对证据并保持科学含义。"

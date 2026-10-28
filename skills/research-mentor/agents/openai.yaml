@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研导师与协调"
+  short_description: "从现有材料定位研究瓶颈，协调角色、证据、优先级与连续交接"
+  default_prompt: "使用 $research-mentor，结合现有研究材料判断当前瓶颈，提出有依据的优先级与可执行的下一步。"

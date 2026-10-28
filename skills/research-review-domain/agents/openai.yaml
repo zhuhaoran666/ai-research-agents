@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究领域审稿"
+  short_description: "核读原始文献与实际证据，区分表述缺失、证据不足和研究缺陷"
+  default_prompt: "请使用 $research-review-domain 独立审查这版稿件的主张、方法与证据，并给出有原文依据的 D 编号意见。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究结果分析"
+  short_description: "从原始产物复算结果，审查可比性与不确定性，给出有边界的结论"
+  default_prompt: "请使用 $research-analysis 从本项目原始实验产物复算结果，检查可比性、波动和成本，区分结果状态并提出有区分力的下一步。"

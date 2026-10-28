@@ -1,0 +1,4 @@
+interface:
+  display_name: "冗余检测与精简"
+  short_description: "用删除试验检查对话、文章、说明和注释，按请求检测或交付精简稿"
+  default_prompt: "请使用 $research-review-redundancy 检测这段内容的可删冗余，保留事实、条件、语气强度和行动要求。"

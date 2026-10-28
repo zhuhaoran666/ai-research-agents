@@ -1,0 +1,4 @@
+interface:
+  display_name: "代码工程师 · 易读易维护"
+  short_description: "建立易读易改的代码与轻量开发环境，控制复杂度并提供清晰维护入口"
+  default_prompt: "请使用 $readable-code-engineer 完成本项目的开发或整理，让我能看懂主要流程、运行检查，并知道以后应在哪里修改功能。"

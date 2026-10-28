@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究代码与实验"
+  short_description: "落实研究实现与基线消融，保存真实运行、恢复线索和可复现证据"
+  default_prompt: "请使用 $research-code 按本项目已有方案和资源范围完成研究实现与实验，保留真实运行状态、全部尝试和复现入口。"

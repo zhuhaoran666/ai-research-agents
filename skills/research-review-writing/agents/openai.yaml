@@ -1,0 +1,4 @@
+interface:
+  display_name: "学术语言审校"
+  short_description: "独立检查语法、术语与表达歧义，以最小修改保持原有科学含义"
+  default_prompt: "请使用 $research-review-writing 审校这版学术文本，给出有定位的 W 编号意见和保持含义的最小改写。"

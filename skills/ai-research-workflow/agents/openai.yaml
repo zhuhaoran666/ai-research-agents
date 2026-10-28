@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研协作入口"
+  short_description: "按当前问题连接十类角色技能，保留真实证据、连续交接与独立双专家审稿"
+  default_prompt: "请使用 $ai-research-workflow，从我已有的材料推进本次研究任务，按需调用角色技能并交付可验证结果。"

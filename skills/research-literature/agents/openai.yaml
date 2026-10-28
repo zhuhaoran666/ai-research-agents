@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研文献与证据"
+  short_description: "围绕研究问题核读已有解法、强基线与反证，保留可追溯的引用依据"
+  default_prompt: "使用 $research-literature，围绕当前研究疑问调查已有解法、强基线与反证，并核实关键引用及实际阅读范围。"
