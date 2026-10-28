@@ -4,7 +4,9 @@
 
 A portable framework for research collaboration: start with a problem and an initial idea, investigate prior work, co-design methods and experiments, implement and analyze them, write the paper and figures, and seek an independent review of substantive issues. Researchers lead scientific judgment and key experimental design; agents support literature search, implementation, execution, analysis, and testable improvements.
 
-**This repository provides role instructions, workflows, and optional templates. It is not an implemented autonomous execution platform, and it does not aim at fully autonomous research.** It is a human-in-the-loop framework: researchers take part in and confirm key decisions (see "Human in the loop" in the [shared conventions](agents/README.md)), and agents proceed within the confirmed scope. Use the roles in a multi-agent tool or apply them sequentially with one agent. The framework is not tied to a model, orchestrator, discipline, publication venue, or compute environment.
+**This repository provides role instructions, workflows, and optional templates. It is not an implemented autonomous execution platform, and it does not aim at fully autonomous research.** It is a human-in-the-loop framework: **discuss every action and every new or exploratory idea with the user first, and obtain explicit confirmation before executing an action.** This includes read-only investigation, routine engineering, delegation, and self-improvement. See "Human in the loop" in the [shared conventions](agents/README.md) for the full requirements. Use the roles in a multi-agent tool or apply them sequentially with one agent. The framework is not tied to a model, orchestrator, discipline, publication venue, or compute environment.
+
+Move lengthy retrieval, comparison, and analysis to the background within the explicitly confirmed scope. Keep the main conversation responsive, share verified findings promptly, and focus each exchange on one research decision. See "Real-time communication and background work" in the [shared conventions](agents/README.md), including how to handle clients without background or interruption support.
 
 ## Quick start
 
@@ -15,11 +17,11 @@ A portable framework for research collaboration: start with a problem and an ini
 
 A starting task to adapt:
 
-> Read the shared principles and mentor instructions, reusing this project's materials. I want to resolve: … . Identify my starting point and guide me through the minimum information needed next, asking one to three questions per round. Help investigate unfamiliar technical details and offer evidence-backed options. Proceed when enough is known, continue independent work while waiting, and keep agreements and open questions in one research note.
+> Read the shared principles and mentor instructions, reusing this project's materials. I want to resolve: … . Identify my starting point and guide me through the minimum information needed next, asking one to three questions per round. Propose investigations for unfamiliar technical details. Before any action, explain its purpose, scope, and effects, discuss it with me, and obtain my explicit confirmation. Present new ideas as candidates for discussion before investigating or implementing them. While waiting, execute only actions I have already discussed and explicitly confirmed; confirm updates to the research note too.
 
 For experiments, the [feedback and evidence guide](docs/experiment-loop.md) connects existing execution tools and distinguishes engineering failures, valid negative results, and insufficient evidence. An optional Python standard-library [evidence checker](scripts/check_evidence.py) checks files, metric sources, and declared numbers. It does not run experiments or certify scientific validity.
 
-## Seven responsibilities
+## Research and editing responsibilities
 
 | Role | Main responsibility |
 |---|---|
@@ -30,16 +32,19 @@ For experiments, the [feedback and evidence guide](docs/experiment-loop.md) conn
 | [`writing`](agents/paper-writer.md) | Read comparable papers closely; write and create research figures from actual evidence |
 | [`reviewer`](agents/manuscript-reviewer.md) | Two independent experts assess academic language, field-specific writing conventions, and substantive research issues |
 | [`mentor`](agents/mentor.md) | Guide users through the information needed next; coordinate direction, priorities, and collaboration |
+| [`review-redundancy`](agents/redundancy-reviewer.md) | Apply deletion tests to identify unnecessary content and simplify it while preserving meaning |
 
-These are responsibilities, not seven required persistent processes. Review contains a [writing expert, `review-writing`](agents/writing-reviewer.md), who checks grammar, word choice, terminology, and academic expression, and a [domain expert, `review-domain`](agents/domain-reviewer.md), who reads comparable papers from leading journals and conferences to assess argument, structure, experiments, and figures, as well as research validity. Both remain independent of the manuscript authoring role and produce separate reports for the mentor to consolidate. `reviewer` is a dispatch entry point, not a third reviewer. Other roles may be combined or supplemented with temporary specialists.
+These are responsibilities, not required persistent processes. Review contains a [writing expert, `review-writing`](agents/writing-reviewer.md), who checks grammar, word choice, terminology, and academic expression, and a [domain expert, `review-domain`](agents/domain-reviewer.md), who reads comparable papers from leading journals and conferences to assess argument, structure, experiments, and figures, as well as research validity. Both remain independent of the manuscript authoring role and produce separate reports for the mentor to consolidate. `reviewer` is a dispatch entry point, not a third reviewer. Other roles may be combined or supplemented with temporary specialists.
+
+The [redundancy reviewer, `review-redundancy`](agents/redundancy-reviewer.md), checks conversation, prose, documentation, and code across roles. Detection is the default mode and lists only actionable items as “original → suggestion (one-sentence reason).” Simplification mode returns the complete revised text. When there is no clear issue, its only reply is “未发现明确的可删冗余”.
 
 ## Principles
 
 - **Learn from evidence.** Study how others solve problems and write papers. Check mechanisms and novelty claims against original papers, official implementations, and meaningful comparisons.
-- **Keep researchers involved in design.** Researchers choose problems, hypotheses, key experiments, and major tradeoffs. Agents actively identify weaknesses, feasibility limits, and alternative explanations.
+- **Discuss every action and new idea first.** Researchers choose problems, hypotheses, experiments, and tradeoffs. Agents identify weaknesses, limits, and candidate explanations, and execute each action only after explicit user confirmation.
 - **Let experiments and writing inform each other.** Enter at any point supported by the available materials; there are no mandatory stage gates.
 - **Make results traceable.** Connect major claims to actual code, configurations, data descriptions, run outputs, and analysis. Preserve negative results too.
-- **Let every role improve its own work.** Agents use user requirements, feedback, and actual outcomes to revise strategies and role instructions, including how they diagnose and verify improvements. Check changes against real materials, keep unverified strategies provisional, and preserve a way to revert. [RSI](docs/rsi.md) is applied as needed, with no extra permanent role or per-step approval process.
+- **Let every role propose improvements.** Agents use user requirements, feedback, and actual outcomes to propose changes to strategies, role instructions, diagnosis, and verification. Discuss these changes with the user and obtain explicit confirmation before implementing or testing them. Check changes against real materials, keep unverified strategies provisional, and preserve a way to revert. [RSI](docs/rsi.md) needs no extra permanent role.
 - **Use two independent review perspectives.** Writing and domain experts may review in parallel; consolidation prioritizes issues that affect research validity. Domain experts search beyond the author's references and support comparisons of writing conventions with actual source passages.
 
 ## Documentation
